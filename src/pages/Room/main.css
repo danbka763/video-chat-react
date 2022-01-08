@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%; height: 100%;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+body, body #root {
+  width: 100%; height: 100%;
+}
+
+body #root>div {
+  width: 100%; height: 100%;
+  display: grid;
+  grid-template-columns: 270px auto;
+  overflow: hidden;
+}
+
+.relative_block {
+  position: relative;
+}
+
+body aside {
+  background-color: #222222;
+  min-width: 270px; height: 100%;
+  padding: 10px;
+  color: rgb(206, 206, 206);
+  position: relative;
+  z-index: 1;
+}
+
+body aside>* {
+  margin: 15px 20px;
+}
+
+body aside>hr {
+  border: 0;
+  background-color: rgb(124, 124, 124);
+  width: 100%; height: 2px;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+body aside .users_name {
+  margin-left: 30px;
+}
+
+body aside .users_name>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body aside .users_name>div img {
+  width: 20px;
+  cursor: pointer;
+}
+
+nav {
+  border-bottom: 1px #b4b4b4 solid;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #bee2ff;
+  position: relative;
+  z-index: 1;
+}
+
+nav img {
+  position: relative;
+  height: 25px;
+  top: 2px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+nav>div {
+  margin-right: 10%;
+}
+
+section {
+  display: grid;
+  grid-template-columns: auto 420px;
+  height: 100%;
+  color: rgb(75, 75, 75);
+}
+
+section article {
+  padding: 10px;
+}
+
+section article.video_block {
+  padding: 0;
+}
+
+section article.video_block .settings_video {
+  width: 100%;
+  padding: 25px 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), #bee2ff);
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+section article.video_block .settings_video img {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+section article.video_block .translation {
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: -98px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section article.video_block .translation img {
+  width: 100%;
+}
+
+section article.chat_block {
+  /* height: 100%; */
+  border-left: 1px #b4b4b4 solid;
+  position: relative;
+  top: -50px;
+  z-index: 1;
+  background-color: white;
+}
+
+section article.chat_block .header_chat h2 {
+  height: 39px;
+  border-bottom: 1px #b4b4b4 solid;
+}
+
+section article.chat_block .chat {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+section article.chat_block .chat .scroll-panel {
+  width: 100%; height: 100%;
+  overflow-y: scroll;
+  /* display: flex;
+  align-items: flex-end; */
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+section article.chat_block .chat .message {
+  display: flex;
+  align-items: center;
+}
+
+section article.chat_block .chat .message textarea {
+  width: 250px; height: 32px;
+  padding: 5px;
+  resize: none;
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: rgb(124, 124, 124) solid 1px;
+  border-right: none;
+  background-color: #bee2ff2a;
+}
+
+section article.chat_block .chat .message button {
+  width: 120px; height: 32px;
+  border: 0;
+  border-radius: 0;
+  border: rgb(124, 124, 124) solid 1px;
+  /* border-left: none; */
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #bee2ff;
+}
+
+section article.chat_block .chat .user_comment {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+section article.chat_block .chat .user_comment .avatar {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #7bc3ff, #bee2ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+section article.chat_block .chat .user_comment .content {
+  width: 319px;
+  text-align: justify;
+  word-wrap: break-word;
+  padding-right: 8px;
+}
+
+section article.chat_block .chat .user_comment .avatar p,
+section article.chat_block .chat .user_comment .name_user {
+  font-size: 20px;
+}
+
+section article.chat_block .chat .scroll-panel .start_text_chat {
+  width: 100%; 
+  text-align: center; 
+  color: #969696; 
+  margin-bottom: 15px;
+}
+
+.chat_block-mobile-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 360px;
+  background-color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.chat_block-mobile-button>button {
+  width: 95%; height: 52px;
+  border: 0;
+  border-radius: 0;
+  border: rgb(124, 124, 124) solid 1px;
+  /* border-left: none; */
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #bee2ff;
+}
+
+
+.closeChat {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.close{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.close:before,
+.close:after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 10px;
+  width: 26px;
+  height: 4px;
+  background: #080607;
+}
+
+.close:before {
+  webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close:after {
+  webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+@media screen and (max-width: 360px) {
+  aside {
+    display: none;
+  }
+
+  .chat_block {
+    display: none;
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  section article.chat_block .chat .message textarea {
+    width: 188px;
+  }
+
+  body {
+    display: block;
+  }
+
+  .right-block {
+    width: 100%;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .icon {
+    margin-right: 0;
+  }
+
+  .name_room {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  section {
+    display: block;
+  }
+
+  .translation {
+    text-align: center;
+  }
+
+  section article.chat_block .chat .user_comment {
+    width: 340px;
+  }
+ 
+  section article.chat_block .chat .user_comment .name_user,
+  section article.chat_block .chat .user_comment .comment_user {
+    width: 260px;
+  }
+}
+
+@media screen and (min-width: 361px) {
+  .chat_block-mobile-button {
+    display: none;
+  }
+
+  .closeChat {
+    display: none;
+  }
+}
