@@ -52,6 +52,7 @@ export default function Room() {
   clients.map((clientID) => {
     clientName.push(clientID === "LOCAL_VIDEO" ? <div>Me</div> : <div>{clientID}</div>)
   })
+
   return (
     <div>
       <aside>
@@ -69,7 +70,7 @@ export default function Room() {
       <div class="right-block">
         <nav>
           <div class="name_room">
-            ID room: #123456
+            ID room: #{window.location.pathname.split("/room/")[1]}
           </div>
           <div class="icon">
             <img src={share} alt="share"/>
